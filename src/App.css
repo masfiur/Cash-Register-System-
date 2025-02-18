@@ -1,38 +1,227 @@
-.App {
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.app-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+h1 {
   text-align: center;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-panel {
+  flex: 3;
   display: flex;
   flex-direction: column;
+  gap: 25px;
+  min-width: 300px;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  min-width: 250px;
+}
+
+.ticket-cashed {
+  background-color: #1e1e1e;
+  border: 2px solid #03da80;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+.ticket-cashed h3 {
+  
+  margin-top: 0;
+}
+
+.number-pad {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.number-button {
+  background-color: #333333;
+  border: none;
+  padding: 18px 0;
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+.number-button:hover {
+  background-color: #444444;
+}
+
+.number-button.selected {
+  background-color: #6200ee;
+  color: white;
+  box-shadow: 0 0 10px rgba(98,0,238,0.4);
+}
+
+.selected-numbers {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  height: 100%;
+}
+
+.selected-numbers h2 {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.numbers-container {
+  min-height: 180px;
+}
+
+.selected-numbers ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.selected-numbers li {
+  background-color: #6200ee;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(98,0,238,0.3);
 }
 
-.App-link {
-  color: #61dafb;
+.money-display {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #333333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.money-display h3 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.money-display p {
+  font-size: 26px;
+  font-weight: bold;
+  color: #03da80;
+}
+
+.money-pad {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.money-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.money-button {
+  background-color: #333333;
+  border: none;
+  padding: 18px 0;
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+.money-button:hover {
+  background-color: #444444;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 15px;
+}
+
+.button {
+  border: none;
+  border-radius: 8px;
+  padding: 18px 0;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.button.clear {
+  background-color: #b4464c;
+  color: #000000;
+}
+
+.button.clear:hover {
+  background-color: #cf6672;
+}
+
+.button.random {
+  background-color: #6200ee;
+  color: #000000;
+}
+
+.button.random:hover {
+  background-color: #9965f4;
+}
+
+.button.cash {
+  background-color: #03da80;
+  color: #000000;
+}
+
+.button.cash:hover {
+  background-color: #00bfa5;
+}
+
+.alert {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  background-color: #cf6679;
+  color: #ffffff;
+  padding: 18px 35px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+
+.alert p {
+  margin: 0;
+  font-weight: 500;
 }
